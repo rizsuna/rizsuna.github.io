@@ -630,15 +630,15 @@ media Queries 767
   }
 
   .rate2:after {
-    width: 33px;
+    width: 31px;
   }
 
   .rate3:after {
-    width: 50px;
+    width: 48px;
   }
 
   .rate4:after {
-    width: 70px;
+    width: 68px;
   }
 
   .rate5:after {
@@ -657,6 +657,6 @@ media Queries 767
   }
 
   .pagetop p a{
-    width: 37px;
+    
   }
 }
