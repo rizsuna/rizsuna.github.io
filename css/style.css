@@ -455,6 +455,12 @@ top
   padding: 15px;
 }
 
+.copyright a{
+    color: #8c8c8c;
+    font-size: 10px;
+    text-align: center;
+}
+
 .copyright {
   font-size: 10px;
   text-align: center;
