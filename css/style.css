@@ -1,0 +1,662 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+  "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+  "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: .8px;
+  word-break: break-all;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #1ca9e3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.pc-only {
+  display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+.hover-action {
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.hover-action:hover {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: translate(0, -4px);
+  transform: translate(0, -4px);
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .12);
+}
+
+/*--------------------------------
+ 文字
+---------------------------------*/
+.heading-primary {
+  font-family: "Open sans", sans-serif;
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 15px;
+  letter-spacing: .0em;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-lead {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/*--------------------------------
+ レイアウト
+---------------------------------*/
+.section {
+  padding: 75px 0;
+}
+
+.section:nth-of-type(odd) {
+  background-color: #f7f7f7;
+}
+
+.inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/*--------------------------------
+ グローバルナビ
+---------------------------------*/
+.gnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+}
+
+.gnav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gnav-item {
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  padding: 0 24px;
+  letter-spacing: .05em;
+}
+
+.gnav-link {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #333;
+}
+
+.gnav-link:hover {
+  opacity: 1;
+}
+
+.gnav-link:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+}
+
+.gnav-link:hover:after {
+  width: 100%;
+}
+
+/* iOS対策 */
+.ios .gnav-link:after,
+.ios .gnav-link:hover:after {
+  display: none;
+}
+
+/*--------------------------------
+ヘッダー
+---------------------------------*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    width: auto;
+    height: 100vh;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.5) 40%,rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.6) 100%),url(../img/header/eu4VEWhGKMKYhbA5L3kdK3ZVHy4ZHKUUBgScwPepcnTwj4jEDWfamxQmiUrnVhEnxzeVG64FsX.JPG);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.logo {
+  position: relative;
+  margin-bottom: 50px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.logo-title {
+  font-family: "Open sans", sans-serif;
+  font-size: 70px;
+  line-height: 1.3;
+        letter-spacing: .01em;
+    color: #000;
+}
+
+.logo-subtitle {
+  font-size: 25px;
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: .1em;
+    color: #000;
+}
+
+.logo-icon {
+    display: flex;
+    margin: 0px auto;
+    width: 300px;
+}
+
+.logo-icon a{
+    padding: 10px 10px;
+    margin: 15px;
+}
+
+.logo-icon a:hover{
+    opacity: 0.7;
+}
+
+.under {
+    position: absolute;
+    top: 70vh;
+}
+
+.under a img{
+    width: 90px;
+    padding: 12px;
+}
+
+/*--------------------------------
+ Profile
+---------------------------------*/
+.about-section .inner {
+  max-width: 1000px;
+}
+
+.about-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-image-wrapper {
+  flex: 0 0 220px;
+  margin-right: 40px;
+}
+
+.about-image {
+  border-radius: 50%;
+  box-shadow: 0 0 25px 0 #d9d9d9;
+}
+
+.about-body {
+  flex: 1;
+}
+
+.about-body p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.data{
+    text-align: right;
+    padding-right: 10px;
+    
+}
+
+/*--------------------------------
+ Skill
+---------------------------------*/
+.skill-section .inner {
+  max-width: 1200px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item {
+  display: flex;
+  flex: 0 0 48%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.skill-body {
+  flex: 1;
+    background-color: #f7f7f7;
+    padding-bottom: 10px;
+}
+
+.skill-title {
+  margin: 10px 0px 20px 0px;
+  text-align: center;
+    font-size: 24px;
+    border-bottom: 2px solid #cccccc;
+}
+
+.table-item {
+    margin: auto;
+}
+
+.table-item th {
+    width: 9%;
+    padding: 10px;
+}
+
+.table-item tr td {
+    width: 10%;
+    text-align: center;
+    word-break:break-all;
+    
+}
+
+.rate {
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  width: 60%;
+  height: 20px;
+  letter-spacing: .2em;
+}
+
+.rate:before,
+.rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  content: "★★★★★";
+}
+
+.rate:before {
+  color: #ddd;
+}
+
+.rate:after {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #f181b4;
+}
+
+.rate1:after {
+  width: 20px;
+}
+
+.rate2:after {
+  width: 40px;
+}
+
+.rate3:after {
+  width: 60px;
+}
+
+.rate4:after {
+  width: 80px;
+}
+
+.rate5:after {
+  width: 100px;
+}
+
+/*--------------------------------
+ Works
+---------------------------------*/
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
+}
+
+.works-item {
+  flex: 0 0 32.31552%;
+  margin-right: 1.52671%;
+  margin-bottom: 40px;
+}
+
+.works-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.works-body {
+  text-align: center;
+}
+
+.works-title {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.works-text {
+  font-size: 10px;
+}
+
+.works-url {
+  font-size: 10px;
+}
+/*--------------------------------
+ Contact
+---------------------------------*/
+.contact-list {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-item {
+  width: 50px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.contact-text {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*--------------------------------
+top
+---------------------------------*/
+.pagetop{
+    position:fixed;
+    bottom:20px;
+    right:10px;
+}
+
+.pagetop p a{
+    display:block;
+    padding:0px;
+    resize: both;
+    width: 50px;
+    border-radius:100%;
+}
+
+.pagetop p a:hover{
+    display: block;
+    opacity: 0.7;
+    border-radius:100%;
+}
+
+/*--------------------------------
+ フッター
+---------------------------------*/
+.footer {
+  background-color: #1d1d1d;
+}
+
+.footer .inner {
+  padding: 15px;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #8c8c8c;
+}
+
+/*---------------------------------------------------
+media Queries 767
+----------------------------------------------------*/
+@media screen and (max-width: 750px) {
+  body {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .pc-only {
+    display: none;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .hover-action {
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .hover-action:hover {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  /* 文字 */
+  .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .heading-primary {
+    font-size: 30px;
+  }
+
+  /* レイアウト */
+  .wrapper {
+    padding-top: 55px;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .section .inner {
+    padding: 0 15px;
+  }
+
+  /* ヘッダー */
+  .header {
+    height: 300px;
+  }
+    
+  .logo{
+        margin-bottom: 0;
+    }
+
+  .logo-title {
+    font-size: 35px;
+    letter-spacing: .1em;
+  }
+
+  .logo-subtitle {
+    font-size: 17px;
+      letter-spacing: 0;
+  }
+
+  .logo-icon {
+        width: 250px;
+    }
+    
+    .logo-icon a{
+        width: 45px;
+    padding: 5px 5px;
+}
+    
+    .under {
+    display: none;
+}
+  /* グローバルナビ */
+  .gnav {
+    padding: 15px 0;
+  }
+
+  .gnav-item {
+    font-size: 13px;
+    padding: 2px 10px;
+  }
+
+  .gnav-link {
+    padding: 0;
+  }
+
+  .gnav-link:hover {
+    opacity: 1;
+  }
+
+  .gnav-link:after {
+    display: none;
+  }
+
+  /* Works */
+  .works-title {
+    font-size: 10px;
+  }
+
+  .works-list {
+    justify-content: space-between;
+  }
+
+  .works-item {
+    flex: 0 0 48%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  /* About */
+  .about-item {
+    display: block;
+  }
+
+  .about-image-wrapper {
+    width: 100px;
+    max-width: 100%;
+    margin: 0 auto 20px;
+  }
+
+  /* Skill */
+.skill-section .inner {
+  max-width: 630px;
+}
+
+  .skill-list {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .skill-item {
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .skill-title {
+    font-size: 20px;
+}
+
+  .skill-item:last-child {
+    margin: 0px;
+  }
+
+  .rate {
+    font-size: 15px;
+    height: 15px;
+  }
+
+  .rate:before,
+  .rate:after {
+    line-height: 15px;
+    height: 15px;
+  }
+
+  .rate1:after {
+    width: 15px;
+  }
+
+  .rate2:after {
+    width: 35px;
+  }
+
+  .rate3:after {
+    width: 55px;
+  }
+
+  .rate4:after {
+    width: 75px;
+  }
+
+  .rate5:after {
+    width: 95px;
+  }
+
+  /* Contact */
+  .contact-item {
+    width: 30px;
+    margin: 0 10px;
+  }
+
+  /* フッター */
+  .footer .inner {
+    padding: 20px 0;
+  }
+
+  .pagetop p a{
+    width: 37px;
+  }
+}
