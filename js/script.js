@@ -1,17 +1,21 @@
-// PhotoSwipe
-initPhotoSwipeFromDOM(".js-my-gallery");
+$(function(){
+  var amount = 200;
+     $('.pagetop').hide();
+ 
+     $(window).scroll(function(){
+     var scrollPoint = $(this).scrollTop();
+     (scrollPoint > amount)?$('.pagetop').fadeIn():(scrollPoint < amount)?$('.pagetop').fadeOut():$('.pagetop').show();
+   });
 
-$(function () {
-
-  //iOSå¯¾ç­–
-  //iOSã§ã¯ç–‘ä¼¼è¦ç´ ã‚’å«ã‚€aã‚¿ã‚°ã®ãƒªãƒ³ã‚¯ã¯ï¼’å›žã‚¿ãƒƒãƒ—ã—ãªã„ã¨é·ç§»ã¨ãƒšãƒ¼ã‚¸å†…ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã‚’ã—ãªã„ãŸã‚ã€
-  //ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚¨ãƒ¼ã‚¸ã‚§ãƒ³ãƒˆåˆ¤å®šã§iOSã®å ´åˆã¯bodyã‚¿ã‚°ã«iosã‚’ä»˜ä¸Žã—ã€å¯¾è±¡ã®ç–‘ä¼¼è¦ç´ ã‚’display: noneã™ã‚‹
+  //iOS‘Îô
+  //iOS‚Å‚Í‹^Ž——v‘f‚ðŠÜ‚Þaƒ^ƒO‚ÌƒŠƒ“ƒN‚Í‚Q‰ñƒ^ƒbƒv‚µ‚È‚¢‚Æ‘JˆÚ‚Æƒy[ƒW“àƒXƒNƒ[ƒ‹‚ð‚µ‚È‚¢‚½‚ßA
+  //ƒ†[ƒU[ƒG[ƒWƒFƒ“ƒg”»’è‚ÅiOS‚Ìê‡‚Íbodyƒ^ƒO‚Éios‚ð•t—^‚µA‘ÎÛ‚Ì‹^Ž——v‘f‚ðdisplay: none‚·‚é
   var ua = navigator.userAgent;
   if (/iPhone|iPad|iPod/.test(ua)) {
     $("body").addClass("ios");
   }
 
-  //ãƒšãƒ¼ã‚¸å†…ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«
+  //ƒy[ƒW“àƒXƒNƒ[ƒ‹
   var $nav = $(".gnav");
   var navHeight = $nav.outerHeight();
 
@@ -21,7 +25,7 @@ $(function () {
     var position = target.offset().top - navHeight;
     $("html, body").animate(
       {
-        scrollTop: position,
+        scrollTop: position
       },
       300,
       "swing"
@@ -29,24 +33,5 @@ $(function () {
     return false;
   });
 
-  //ãƒšãƒ¼ã‚¸ãƒˆãƒƒãƒ—
-  $("#js-page-top").on("click", function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      300
-    );
-    return false;
-  });
 });
 
-$(function(){
-  var amount = 200;
-     $('.pagetop').hide();
- 
-     $(window).scroll(function(){
-     var scrollPoint = $(this).scrollTop();
-     (scrollPoint > amount)?$('.pagetop').fadeIn():(scrollPoint < amount)?$('.pagetop').fadeOut():$('.pagetop').show();
-   });
-});
