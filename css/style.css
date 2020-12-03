@@ -202,12 +202,12 @@ header
 .logo-icon {
     display: flex;
     margin: 0px auto;
-    width: 240px;
+    padding: 0px 70px;
+    width: 500px;
 }
 
 .logo-icon a{
-    
-    width: 70px;
+    width: 80px;
     padding: 10px 10px;
     margin: auto;
 }
@@ -532,7 +532,7 @@ mobile
   }
 
   .logo-icon {
-    width: 150px;
+    padding: 0px 140px;
     }
     
     .logo-icon a{
